@@ -13,13 +13,13 @@
     <script type="text/javascript" src="js/controllers.js"></script>
   </head>
   <body>
-    <nav class="navbar navbar-default">
+    <nav class="navbar navbar-default" ng-controller="NavController">
       <div class="container-fluid">
         <ul class="nav navbar-nav">
-          <li><a href="/#/bio">Bio</a></li>
-          <li><a href="/#/projects">Projects</a></li>
-          <li><a href="/#/resume">Resume</a></li>
-          <li><a href="/#/home">Home</a></li>
+          <li ng-class="{ active: isActive('/')}"><a href="/">Home</a></li>
+          <li ng-class="{ active: isActive('/bio')}"><a href="/bio">Bio</a></li>
+          <li ng-class="{ active: isActive('/projects')}"><a href="/projects">Projects</a></li>
+          <li ng-class="{ active: isActive('/resume')}"><a href="/resume">Resume</a></li>
         </ul>
       </div>
     </nav>
